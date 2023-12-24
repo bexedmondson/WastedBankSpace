@@ -48,8 +48,8 @@ public interface WastedBankSpaceConfig extends Config
 	String FLAMTAER_BAG_CHECK_KEY = "flamtaerBagCheck";
 	String NIGHTMARE_ZONE_CHECK_KEY = "nightmareZoneCheck";
 	String TOY_BOX_CHECK_KEY = "toyBoxCheck";
-
 	String SPICE_RACK_CHECK_KEY = "spiceRackCheck";
+	String FORESTRY_KIT_CHECK_KEY = "forestryKitCheck";
 
 	@ConfigItem(keyName = CLUE_ITEM_CHECK_KEY,
 			name = "PoH Clue Item Storage",
@@ -182,10 +182,19 @@ public interface WastedBankSpaceConfig extends Config
 	}
   
   @ConfigItem(keyName = SPICE_RACK_CHECK_KEY,
-		name = "Spice rack storage",
+		name = "Spice Rack Storage",
 		description = "Storage for spicy stew spices in the PoH kitchen",
-		position = 13)
+		position = 14)
 	default boolean spiceRackStorageCheck() 
+  { 
+    return true; 
+  }
+
+  @ConfigItem(keyName = FORESTRY_KIT_CHECK_KEY,
+		name = "Forestry Kit Storage",
+		description = "Check for items that could be in your forestry kit",
+		position = 15)
+	default boolean forestryKitStorageCheck() 
   { 
     return true; 
   }
