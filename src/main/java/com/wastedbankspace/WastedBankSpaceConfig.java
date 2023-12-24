@@ -133,7 +133,7 @@ public interface WastedBankSpaceConfig extends Config
 
 	@ConfigItem(keyName = FOSSIL_STORAGE_CHECK_KEY,
 			name = "Fossil Storage",
-			description = "Storage for fossils on Fossil Island and in Varrok Museum",
+			description = "Storage for fossils on Fossil Island and in Varrock Museum",
 			position = 9
 	)
 	default boolean fossilStorageCheck()
